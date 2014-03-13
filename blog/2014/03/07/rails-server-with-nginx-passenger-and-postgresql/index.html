@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Software Development Stuff</title>
+  <title>Ruby on Rails Server With Nginx, Phusion Passenger and PostgreSQL - Software Development Stuff</title>
   <meta name="author" content="Tommi Järvinen">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tiere.github.io/blog">
+  <link rel="canonical" href="http://tiere.github.io/blog/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Software Development Stuff" type="application/atom+xml">
@@ -63,15 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql/">Ruby on Rails Server With Nginx, Phusion Passenger and PostgreSQL</a></h1>
+      <h1 class="entry-title">Ruby on Rails Server With Nginx, Phusion Passenger and PostgreSQL</h1>
     
     
       <p class="meta">
@@ -94,7 +91,7 @@
   </header>
 
 
-  <div class="entry-content"><h2>Introduction</h2>
+<div class="entry-content"><h2>Introduction</h2>
 
 <p>Instructions for setting up Ubuntu 12.04.4 LTS to host a Ruby on Rails Application with nginx as the web server, Phusion Passenger as the application server and PostgreSQL as the database. This has been tested on a clean installation of Ubuntu 12.04.4, but should work on existing installation and different versions with little changes as well. This is one of my first blog posts so take that into account when giving feedback.</p>
 
@@ -379,22 +376,16 @@
 
 <p>Your application should now be served properly by nginx on port 80 :) If you run into problems, check the logs at /var/log/nginx to see whether they help identify the problem.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/03/vagrant-for-ruby-on-rails-development-on-ubuntu-13-dot-10/">Vagrant for Ruby on Rails Development on Ubuntu 13.10</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Tommi Järvinen</span></span>
+
+      
 
 
 
@@ -406,135 +397,44 @@
   
 
 
-<time datetime="2014-03-03T15:12:17+02:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
+<time datetime="2014-03-07T16:36:02+02:00" pubdate data-updated="true">Mar 7<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/passenger/'>Passenger</a>, <a class='category' href='/blog/categories/postgresql/'>PostgreSQL</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/nginx/'>nginx</a>, <a class='category' href='/blog/categories/server/'>server</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><h2>Installing</h2>
-
-<p>Vagrant can be installed on Ubuntu via apt-get, but the version is really old. I downloaded the .deb -file from <a href="http://www.vagrantup.com/downloads.html.">http://www.vagrantup.com/downloads.html.</a></p>
-
-<h2>Configuring</h2>
-
-<p>First create a folder for your project and go to that folder. The following command will initialize a new vagrant virtual machine and use Ubuntu Precise as the base:</p>
-
-<pre><code>$ vagrant init precise32 http://files.vagrantup.com/precise32.box
-</code></pre>
-
-<p>Vagrant will also create a Vagrantfile in the working directory. Open the file for editing and the change the following line:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="c1"># Create a forwarded port mapping which allows access to a specific port</span>
-</span><span class='line'>  <span class="c1"># within the machine from a port on the host machine. In the example below,</span>
-</span><span class='line'>  <span class="c1"># accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span>
-</span><span class='line'>  <span class="c1"># config.vm.network :forwarded_port, guest: 80, host: 8080</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>to</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="c1"># Create a forwarded port mapping which allows access to a specific port</span>
-</span><span class='line'>  <span class="c1"># within the machine from a port on the host machine. In the example below,</span>
-</span><span class='line'>  <span class="c1"># accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span>
-</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">network</span> <span class="ss">:forwarded_port</span><span class="p">,</span> <span class="ss">guest</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span> <span class="ss">host</span><span class="p">:</span> <span class="mi">3000</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>to forward the default Rails development port to the virtual machine.
-Now create two script files to the same directory with Vagrantfile. We will include all software installation in those scripts. You can name the scripts as you like, the names that I use are just examples:</p>
-
-<pre><code>$ nano installation.sh
-</code></pre>
-
-<p>I have put the following commands into the first scripts that will be run as root. Feel free to customize these commands to your liking. Node.js is included because its needed for some javascript operations:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/usr/bin/env bash</span>
-</span><span class='line'><span class="nb">echo</span> -e <span class="s2">&quot;deb mirror://mirrors.ubuntu.com/mirrors.txt precise main restricted universe multiverse\ndeb mirror://mirrors.ubuntu.com/mirrors.txt precise-updates main restricted universe multiverse\ndeb mirror://mirrors.ubuntu.com/mirrors.txt precise-backports main restricted universe multiverse\ndeb mirror://mirrors.ubuntu.com/mirrors.txt precise-security main restricted universe multiverse\n$(cat /etc/apt/sources.list)&quot;</span> &gt; /etc/sources.list
-</span><span class='line'>apt-get update
-</span><span class='line'>apt-get install -y git build-essential nodejs libsqlite3-dev
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After this create another script file to be run as normal user. The script will first install rbenv for easy switching between different Ruby versions. Then it will install a version of Ruby, in my case 2.1.0. It will then set that version of Ruby to be the global default. Finally it will install Rails and Bundler:</p>
-
-<pre><code>$ nano installation_user.sh
-</code></pre>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/usr/bin/env bash</span>
-</span><span class='line'>git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
-</span><span class='line'><span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.bash_profile
-</span><span class='line'>git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-</span><span class='line'><span class="nb">source</span> ~/.bash_profile
-</span><span class='line'>rbenv install -v 2.1.0 <span class="c"># replace with the ruby version that you want to use</span>
-</span><span class='line'>rbenv global 2.1.0 <span class="c"># replace with the ruby version that you want to use</span>
-</span><span class='line'>gem install rails
-</span><span class='line'>gem install bundler
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After this add the following lines to Vagrantfile to include your new shell scripts:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="ss">:shell</span><span class="p">,</span> <span class="ss">path</span><span class="p">:</span> <span class="s2">&quot;installation.sh&quot;</span>
-</span><span class='line'>  <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="ss">:shell</span><span class="p">,</span> <span class="ss">path</span><span class="p">:</span> <span class="s2">&quot;installation_user.sh&quot;</span><span class="p">,</span> <span class="ss">privileged</span><span class="p">:</span> <span class="kp">false</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>After this the configuration for your Ruby on Rails development environment should be configured and you can start the Vagrant box with the following command:</p>
-
-<pre><code>$ vagrant up
-</code></pre>
-
-<p>The startup will take some time the first time because it will install the whole system like you previously configured. After the process has finished you can ssh to your new virtual machine with the command:</p>
-
-<pre><code>$ vagrant ssh
-</code></pre>
-
-<p>The directory where you most likely will want to initialize your Rails project(s) inside the virtual machine is:</p>
-
-<pre><code>/vagrant/
-</code></pre>
-
-<p>Since it will be shared between your guest and host machine. You should now be set up to start developing your application.</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tiere.github.io/blog/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql/" data-via="" data-counturl="http://tiere.github.io/blog/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/03/03/vagrant-for-ruby-on-rails-development-on-ubuntu-13-dot-10/" title="Previous Post: Vagrant for Ruby on Rails Development on Ubuntu 13.10">&laquo; Vagrant for Ruby on Rails Development on Ubuntu 13.10</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -555,7 +455,7 @@ Now create two script files to the same directory with Vagrantfile. We will incl
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/tiere">@tiere</a> on GitHub
@@ -588,6 +488,7 @@ Now create two script files to the same directory with Vagrantfile. We will incl
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -602,7 +503,10 @@ Now create two script files to the same directory with Vagrantfile. We will incl
       var disqus_shortname = 'softwaredevelopmentstuff';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tiere.github.io/blog/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql/';
+        var disqus_url = 'http://tiere.github.io/blog/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
