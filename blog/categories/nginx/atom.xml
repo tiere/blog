@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Nginx | Software Development Stuff]]></title>
-  <link href="http://tiere.github.io/blog/blog/categories/nginx/atom.xml" rel="self"/>
-  <link href="http://tiere.github.io/blog/"/>
-  <updated>2014-03-13T19:53:36+02:00</updated>
-  <id>http://tiere.github.io/blog/</id>
+  <link href="http://blog.tommijarvinen.com/blog/categories/nginx/atom.xml" rel="self"/>
+  <link href="http://blog.tommijarvinen.com/"/>
+  <updated>2014-03-13T20:55:14+02:00</updated>
+  <id>http://blog.tommijarvinen.com/</id>
   <author>
     <name><![CDATA[Tommi Järvinen]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby on Rails Server With Nginx, Phusion Passenger and PostgreSQL]]></title>
-    <link href="http://tiere.github.io/blog/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql/"/>
+    <link href="http://blog.tommijarvinen.com/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql/"/>
     <updated>2014-03-07T16:36:02+02:00</updated>
-    <id>http://tiere.github.io/blog/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql</id>
+    <id>http://blog.tommijarvinen.com/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql</id>
     <content type="html"><![CDATA[<h2>Introduction</h2>
 
 <p>Instructions for setting up Ubuntu 12.04.4 LTS to host a Ruby on Rails Application with nginx as the web server, Phusion Passenger as the application server and PostgreSQL as the database. This has been tested on a clean installation of Ubuntu 12.04.4, but should work on existing installation and different versions with little changes as well. This is one of my first blog posts so take that into account when giving feedback.</p>

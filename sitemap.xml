@@ -2,26 +2,26 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://tiere.github.io/blog/blog/2014/03/03/vagrant-for-ruby-on-rails-development-on-ubuntu-13-dot-10/
+            http://blog.tommijarvinen.com/blog/2014/03/03/vagrant-for-ruby-on-rails-development-on-ubuntu-13-dot-10/
         </loc>
         <lastmod>2014-03-06T00:16:46+02:00</lastmod>
     </url>
     <url>
         <loc>
-            http://tiere.github.io/blog/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql/
+            http://blog.tommijarvinen.com/blog/2014/03/07/rails-server-with-nginx-passenger-and-postgresql/
         </loc>
         <lastmod>2014-03-10T19:41:04+02:00</lastmod>
     </url>
     <url>
-        <loc>http://tiere.github.io/blog/</loc>
+        <loc>http://blog.tommijarvinen.com/</loc>
         <lastmod>2014-03-10T19:41:04+02:00</lastmod>
     </url>
     <url>
-        <loc>http://tiere.github.io/blog/robots.txt</loc>
+        <loc>http://blog.tommijarvinen.com/robots.txt</loc>
         <lastmod>2014-03-06T00:16:46+02:00</lastmod>
     </url>
     <url>
-        <loc>http://tiere.github.io/blog/blog/archives/</loc>
+        <loc>http://blog.tommijarvinen.com/blog/archives/</loc>
         <lastmod>2014-03-10T19:41:04+02:00</lastmod>
     </url>
 </urlset>
